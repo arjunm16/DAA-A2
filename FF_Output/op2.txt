@@ -1,0 +1,10 @@
+Max Flow : 13
+10 - 0
+10 - 2
+10 - 5
+10 - 9
+Min-cut capacity = 13
+Min-cut:
+Set S = {10}
+Set T = {11, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+Time elapsed = 127[µs]

@@ -1,0 +1,110 @@
+\hypertarget{mbp_8cpp}{}\doxysection{mbp.\+cpp File Reference}
+\label{mbp_8cpp}\index{mbp.cpp@{mbp.cpp}}
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mbp_8cpp_ad26f22d6e915ce58503805806361852a}{print\+Vec}} (vector$<$ vector$<$ int $>$ $>$ g)
+\begin{DoxyCompactList}\small\item\em Prints the 2D Vector. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{mbp_8cpp_a5587dbc6ce7e639c7ee4fc9a21740aae}{bfs}} (vector$<$ vector$<$ int $>$ $>$ residual\+Graph, int s, int t, int store\mbox{[}$\,$\mbox{]}, int V)
+\begin{DoxyCompactList}\small\item\em Performs Breadth-\/\+First Search on Residual Graph to find a path between s and t. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{mbp_8cpp_a90e2b413ced6c8fe78e08d8934519d19}{FF}} (vector$<$ vector$<$ int $>$ $>$ G, int s, int t, int V)
+\begin{DoxyCompactList}\small\item\em Ford Fulkerson algorithm. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mbp_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Transforms the Bipartite Graph into Adjacency list and calculates the maximum flow to find Maximum Bipartite Matching. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{mbp_8cpp_a813589a1489809b4df1401667a9bb936}\label{mbp_8cpp_a813589a1489809b4df1401667a9bb936}} 
+int {\bfseries max\+\_\+flow}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mbp_8cpp_a5587dbc6ce7e639c7ee4fc9a21740aae}\label{mbp_8cpp_a5587dbc6ce7e639c7ee4fc9a21740aae}} 
+\index{mbp.cpp@{mbp.cpp}!bfs@{bfs}}
+\index{bfs@{bfs}!mbp.cpp@{mbp.cpp}}
+\doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
+{\footnotesize\ttfamily bool bfs (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$}]{residual\+Graph,  }\item[{int}]{s,  }\item[{int}]{t,  }\item[{int}]{store\mbox{[}$\,$\mbox{]},  }\item[{int}]{V }\end{DoxyParamCaption})}
+
+
+
+Performs Breadth-\/\+First Search on Residual Graph to find a path between s and t. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em residual\+Graph} & residual\+Graph where initial node are 0 \\
+\hline
+{\em s} & source node s \\
+\hline
+{\em t} & destination node t \\
+\hline
+{\em store} & array for storing nodes \\
+\hline
+{\em V} & Total number of Vertices \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns if there is a path between s to t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mbp_8cpp_a90e2b413ced6c8fe78e08d8934519d19}\label{mbp_8cpp_a90e2b413ced6c8fe78e08d8934519d19}} 
+\index{mbp.cpp@{mbp.cpp}!FF@{FF}}
+\index{FF@{FF}!mbp.cpp@{mbp.cpp}}
+\doxysubsubsection{\texorpdfstring{FF()}{FF()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ int $>$ $>$ FF (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$}]{G,  }\item[{int}]{s,  }\item[{int}]{t,  }\item[{int}]{V }\end{DoxyParamCaption})}
+
+
+
+Ford Fulkerson algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & Graph g \\
+\hline
+{\em s} & Source node s \\
+\hline
+{\em t} & Destination node t \\
+\hline
+{\em V} & Total number of Vertices \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the Residual Graph for Graph G 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mbp_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{mbp_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{mbp.cpp@{mbp.cpp}!main@{main}}
+\index{main@{main}!mbp.cpp@{mbp.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Transforms the Bipartite Graph into Adjacency list and calculates the maximum flow to find Maximum Bipartite Matching. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Command Line Arguments \\
+\hline
+{\em argv} & Command Line Arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the Maximum Bipartite Matching in a Bipartite Graph 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mbp_8cpp_ad26f22d6e915ce58503805806361852a}\label{mbp_8cpp_ad26f22d6e915ce58503805806361852a}} 
+\index{mbp.cpp@{mbp.cpp}!printVec@{printVec}}
+\index{printVec@{printVec}!mbp.cpp@{mbp.cpp}}
+\doxysubsubsection{\texorpdfstring{printVec()}{printVec()}}
+{\footnotesize\ttfamily void print\+Vec (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$}]{g }\end{DoxyParamCaption})}
+
+
+
+Prints the 2D Vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & Graph g \\
+\hline
+\end{DoxyParams}

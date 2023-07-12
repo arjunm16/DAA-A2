@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ford-Fulkerson Algorithm</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="" />
+    <style>
+      nav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+nav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+table, th, td {
+  padding: 7px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.img-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.img-container img {
+  max-width: 30%;
+  height: auto;
+  padding: 10px;
+}
+
+
+    </style>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+</head>
+<body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="ff.html">Ford-Fulkerson Algorithm</a>
+		<a href="line_fitting.html">Line Fitting DP Algorithm</a>
+	  </nav>
+    <br>
+    <center><h1>Ford-Fulkerson Algorithm</h1></center>
+
+    <p>
+        <ul>
+        <li> The Ford-Fulkerson algorithm is a method for solving the maximum flow problem in a network. Given a directed graph with a source node and a sink node, the goal of the maximum flow problem is to find the maximum flow that can be sent from the source to the sink without violating capacity constraints on the edges.</li>
+        <br>
+        <li> The algorithm works by repeatedly finding an augmenting path from the source to the sink that has available capacity, and then increasing the flow along that path. An augmenting path is a path in the graph from the source to the sink that has available capacity on each edge.</li>
+        <br>
+        <li> The algorithm maintains a residual graph, which is a representation of the remaining capacity on each edge after some flow has been sent through the network. The algorithm searches for augmenting paths in the residual graph, and uses these paths to increase the flow in the original graph.</li>
+        <br>
+        <li> The Ford-Fulkerson algorithm can be implemented using various search algorithms, such as depth-first search or breadth-first search, to find augmenting paths. The algorithm terminates when no augmenting path can be found, at which point the flow found so far is the maximum flow.</li>
+        <br>
+        <li> However, the basic Ford-Fulkerson algorithm can fail to converge if the capacities are not integers or if the network has cycles with negative capacity.</li> 
+        <br>
+        <li> The general algorithm can be summarized as follows:</li>
+        <ol>
+                <li>Initialize the flow on all edges to 0.</li>
+                <li>While there exists an augmenting path in the residual graph:
+                    <ol style="list-style-type: lower-alpha;">
+                        <li>Find an augmenting path in the residual graph from the source to the sink.</li>
+                        <li>Determine the amount of flow that can be sent along the augmenting path by finding the minimum residual capacity along the path.</li>
+                        <li>Increase the flow along the augmenting path by the determined amount.</li>
+                        <li>Update the residual capacities of the edges in the residual graph.</li>
+                    </ol>
+                </li>
+                <li>Return the maximum flow found.</li>
+            </ol>
+
+        <br>
+        <li>The Ford-Fulkerson Algorithm is used to solve the following two problems apart from the maximum-flow:</li>
+        <ol>
+            <li><a href="S-T_Cut.html"> Minimum st-cut of a network flow graph </a> </li>
+            <li> <a href="bipartite_matching.html">Bipartite Matching problem </a> </li>
+        </ol>
+        <br>
+        <li>The time complexity of the Ford-Fulkerson algorithm is O(VE^2), where V is the number of nodes and E is the number of edges in the graph.</li>
+        </ul>
+    </p>
+
+    <p>
+        <center><h3>Analysis of Results</h3></center>
+        <ul>
+            <li>The code implemetation was run for several testcases upto 256 nodes.</li>
+            <li>The graph shows Time elapsed Vs the total number of nodes in the graph.</li>
+            <li>It can  be seen that the variation of time with nodes is fairly linear in our case.</li>
+            <li>It is important to note that this worst-case time complexity is not always reached in practice, and the actual running time may be much faster depending on the specific structure of the graph and the implementation of the algorithm.</li>
+        </ul>
+    </p>
+
+    <div class="img-container">
+		<img src="ff.png" alt="Image 1">
+	</div>
+
+
+
+</body>
+</html>

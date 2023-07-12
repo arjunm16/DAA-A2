@@ -1,0 +1,34 @@
+@mainpage CSF364 - DAA Assignment 2
+
+The Ford-Fulkerson algorithm is a method for solving the maximum flow problem in a network. Given a directed graph with a source node and a sink node, the goal of the maximum flow problem is to find the maximum flow that can be sent from the source to the sink without violating capacity constraints on the edges.
+
+The algorithm works by repeatedly finding an augmenting path from the source to the sink that has available capacity, and then increasing the flow along that path. An augmenting path is a path in the graph from the source to the sink that has available capacity on each edge.
+
+The algorithm maintains a residual graph, which is a representation of the remaining capacity on each edge after some flow has been sent through the network. The algorithm searches for augmenting paths in the residual graph, and uses these paths to increase the flow in the original graph.
+
+The Ford-Fulkerson algorithm can be implemented using various search algorithms, such as depth-first search or breadth-first search, to find augmenting paths. The algorithm terminates when no augmenting path can be found, at which point the flow found so far is the maximum flow.
+
+However, the basic Ford-Fulkerson algorithm can fail to converge if the capacities are not integers or if the network has cycles with negative capacity.
+
+The general algorithm can be summarized as follows:
+Initialize the flow on all edges to 0.
+While there exists an augmenting path in the residual graph:
+Find an augmenting path in the residual graph from the source to the sink.
+Determine the amount of flow that can be sent along the augmenting path by finding the minimum residual capacity along the path.
+Increase the flow along the augmenting path by the determined amount.
+Update the residual capacities of the edges in the residual graph.
+Return the maximum flow found.
+
+The Ford-Fulkerson Algorithm is used to solve the following two problems apart from the maximum-flow:
+Minimum st-cut of a network flow graph
+Bipartite Matching problem
+
+Visualisation has been done using Python.
+
+Group Details
+
+|     Name            	    |            ID      	    |
+|------------------	        |---------------------------|	    
+| Harsh Vardhan Gupta     	|     2019B3A70630H 	    |
+| Aryan Kapadia         	|     2019B3A70412H 	    |
+| Arjun Muthiah  	        |     2019B3A70374H 	    |

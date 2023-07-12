@@ -1,0 +1,166 @@
+\hypertarget{fordf_8cpp}{}\doxysection{fordf.\+cpp File Reference}
+\label{fordf_8cpp}\index{fordf.cpp@{fordf.cpp}}
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{fordf_8cpp_a276c5a0e984cf60015b27252fe04fe6b}\label{fordf_8cpp_a276c5a0e984cf60015b27252fe04fe6b}} 
+\#define {\bfseries pb}~push\+\_\+back
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{fordf_8cpp_ad26f22d6e915ce58503805806361852a}{print\+Vec}} (vector$<$ vector$<$ int $>$ $>$ g)
+\begin{DoxyCompactList}\small\item\em Prints the 2-\/D vector. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{fordf_8cpp_a5587dbc6ce7e639c7ee4fc9a21740aae}{bfs}} (vector$<$ vector$<$ int $>$ $>$ residual\+Graph, int s, int t, int store\mbox{[}$\,$\mbox{]}, int V)
+\begin{DoxyCompactList}\small\item\em Performs Breadth-\/\+First Search on Residual Graph to find a path between s and t. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{fordf_8cpp_a90e2b413ced6c8fe78e08d8934519d19}{FF}} (vector$<$ vector$<$ int $>$ $>$ G, int s, int t, int V)
+\begin{DoxyCompactList}\small\item\em Ford Fulkerson algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fordf_8cpp_a9116e5678302b3d18cdaeeef00997076}{dfs}} (vector$<$ vector$<$ int $>$ $>$ residual\+Graph, int s, bool v1\mbox{[}$\,$\mbox{]}, int V)
+\begin{DoxyCompactList}\small\item\em Depth First Search for finding for reachable nodes from source node s. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fordf_8cpp_a3db9bd2ff5b99afecf41d41e621baf06}{min\+Cut}} (int s, int t, int V, vector$<$ vector$<$ int $>$ $>$ residual\+Graph, bool v1\mbox{[}$\,$\mbox{]}, vector$<$ vector$<$ int $>$ $>$ G)
+\begin{DoxyCompactList}\small\item\em Calculates Min Cut from Max Flow graph obtained from Ford Fulkerson. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fordf_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Main Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{fordf_8cpp_a813589a1489809b4df1401667a9bb936}\label{fordf_8cpp_a813589a1489809b4df1401667a9bb936}} 
+int {\bfseries max\+\_\+flow}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{fordf_8cpp_a5587dbc6ce7e639c7ee4fc9a21740aae}\label{fordf_8cpp_a5587dbc6ce7e639c7ee4fc9a21740aae}} 
+\index{fordf.cpp@{fordf.cpp}!bfs@{bfs}}
+\index{bfs@{bfs}!fordf.cpp@{fordf.cpp}}
+\doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
+{\footnotesize\ttfamily bool bfs (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$}]{residual\+Graph,  }\item[{int}]{s,  }\item[{int}]{t,  }\item[{int}]{store\mbox{[}$\,$\mbox{]},  }\item[{int}]{V }\end{DoxyParamCaption})}
+
+
+
+Performs Breadth-\/\+First Search on Residual Graph to find a path between s and t. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em residual\+Graph} & residual\+Graph where initial node are 0 \\
+\hline
+{\em s} & source node s \\
+\hline
+{\em t} & destination node t \\
+\hline
+{\em store} & array for storing nodes \\
+\hline
+{\em V} & Total number of Vertices \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns if there is a path between s to t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fordf_8cpp_a9116e5678302b3d18cdaeeef00997076}\label{fordf_8cpp_a9116e5678302b3d18cdaeeef00997076}} 
+\index{fordf.cpp@{fordf.cpp}!dfs@{dfs}}
+\index{dfs@{dfs}!fordf.cpp@{fordf.cpp}}
+\doxysubsubsection{\texorpdfstring{dfs()}{dfs()}}
+{\footnotesize\ttfamily void dfs (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$}]{residual\+Graph,  }\item[{int}]{s,  }\item[{bool}]{v1\mbox{[}$\,$\mbox{]},  }\item[{int}]{V }\end{DoxyParamCaption})}
+
+
+
+Depth First Search for finding for reachable nodes from source node s. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em residual\+Graph} & Residual Graph of Graph G \\
+\hline
+{\em s} & source node s \\
+\hline
+{\em v1} & Boolean array for checking if that node is visited or not \\
+\hline
+{\em V} & Total number of Vertices \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fordf_8cpp_a90e2b413ced6c8fe78e08d8934519d19}\label{fordf_8cpp_a90e2b413ced6c8fe78e08d8934519d19}} 
+\index{fordf.cpp@{fordf.cpp}!FF@{FF}}
+\index{FF@{FF}!fordf.cpp@{fordf.cpp}}
+\doxysubsubsection{\texorpdfstring{FF()}{FF()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ int $>$ $>$ FF (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$}]{G,  }\item[{int}]{s,  }\item[{int}]{t,  }\item[{int}]{V }\end{DoxyParamCaption})}
+
+
+
+Ford Fulkerson algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & Graph g \\
+\hline
+{\em s} & Source node s \\
+\hline
+{\em t} & Destination node t \\
+\hline
+{\em V} & Total number of Vertices \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the Residual Graph for Graph G 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fordf_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{fordf_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{fordf.cpp@{fordf.cpp}!main@{main}}
+\index{main@{main}!fordf.cpp@{fordf.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Main Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Command line arguments \\
+\hline
+{\em argv} & Command line arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the Maximum Flow and Minimum Capacity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fordf_8cpp_a3db9bd2ff5b99afecf41d41e621baf06}\label{fordf_8cpp_a3db9bd2ff5b99afecf41d41e621baf06}} 
+\index{fordf.cpp@{fordf.cpp}!minCut@{minCut}}
+\index{minCut@{minCut}!fordf.cpp@{fordf.cpp}}
+\doxysubsubsection{\texorpdfstring{minCut()}{minCut()}}
+{\footnotesize\ttfamily void min\+Cut (\begin{DoxyParamCaption}\item[{int}]{s,  }\item[{int}]{t,  }\item[{int}]{V,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{residual\+Graph,  }\item[{bool}]{v1\mbox{[}$\,$\mbox{]},  }\item[{vector$<$ vector$<$ int $>$ $>$}]{G }\end{DoxyParamCaption})}
+
+
+
+Calculates Min Cut from Max Flow graph obtained from Ford Fulkerson. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Source node s \\
+\hline
+{\em t} & Destination node t \\
+\hline
+{\em V} & Total number of Vertices \\
+\hline
+{\em residual\+Graph} & Residual Graph of Graph G \\
+\hline
+{\em v1} & Boolean array for obtaining Set S and Set T \\
+\hline
+{\em G} & Graph G \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fordf_8cpp_ad26f22d6e915ce58503805806361852a}\label{fordf_8cpp_ad26f22d6e915ce58503805806361852a}} 
+\index{fordf.cpp@{fordf.cpp}!printVec@{printVec}}
+\index{printVec@{printVec}!fordf.cpp@{fordf.cpp}}
+\doxysubsubsection{\texorpdfstring{printVec()}{printVec()}}
+{\footnotesize\ttfamily void print\+Vec (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$}]{g }\end{DoxyParamCaption})}
+
+
+
+Prints the 2-\/D vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & Graph g ~\newline
+ \\
+\hline
+\end{DoxyParams}

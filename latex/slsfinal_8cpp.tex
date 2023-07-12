@@ -1,0 +1,148 @@
+\hypertarget{slsfinal_8cpp}{}\doxysection{slsfinal.\+cpp File Reference}
+\label{slsfinal_8cpp}\index{slsfinal.cpp@{slsfinal.cpp}}
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlineqn}{lineqn}}
+\begin{DoxyCompactList}\small\item\em Equation of Line. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structpoint}{point}}
+\begin{DoxyCompactList}\small\item\em Cartesian Point coordinate (X, Y) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{slsfinal_8cpp_a276c5a0e984cf60015b27252fe04fe6b}\label{slsfinal_8cpp_a276c5a0e984cf60015b27252fe04fe6b}} 
+\#define {\bfseries pb}~push\+\_\+back
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{slsfinal_8cpp_aa2389c8e2e37cdff99c899637779ed5e}{calc\+Err}} (vector$<$ \mbox{\hyperlink{structpoint}{point}} $>$ pts, \mbox{\hyperlink{structlineqn}{lineqn}} l)
+\begin{DoxyCompactList}\small\item\em Calculates the Squared Error for a given set of points and line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{slsfinal_8cpp_ae884faf203555f8f8925d78925870ee8}{precalc}} (vector$<$ \mbox{\hyperlink{structpoint}{point}} $>$ pts, vector$<$ vector$<$ \mbox{\hyperlink{structlineqn}{lineqn}} $>$ $>$ \&L, vector$<$ vector$<$ double $>$ $>$ \&E)
+\begin{DoxyCompactList}\small\item\em Calculated the line of best fit from set of points from i to j. Also, calculates the sqaured error of set of points wrt the best fit line calculated previously. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{slsfinal_8cpp_a5c02a787ceb6d511e48a746bd6b27f51}{SLS\+\_\+helper}} (vector$<$ \mbox{\hyperlink{structpoint}{point}} $>$ pts, int n, vector$<$ vector$<$ \mbox{\hyperlink{structlineqn}{lineqn}} $>$ $>$ L, vector$<$ vector$<$ double $>$ $>$ E, vector$<$ double $>$ \&M, double C, vector$<$ int $>$ \&M\+\_\+idx)
+\begin{DoxyCompactList}\small\item\em Runs the SLS algorithm and stores the answer (Least total penalty as per SLS) in the vector M. M\mbox{[}i\mbox{]} = OPT(i) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{slsfinal_8cpp_a69f12a7d6498db1eefeb42e64ef0728b}{SLS}} (vector$<$ \mbox{\hyperlink{structpoint}{point}} $>$ pts, int j, vector$<$ vector$<$ \mbox{\hyperlink{structlineqn}{lineqn}} $>$ $>$ L, vector$<$ vector$<$ double $>$ $>$ E, vector$<$ double $>$ \&M, ofstream \&outfile, double C)
+\begin{DoxyCompactList}\small\item\em Runs the SLS algorithm and stores the answer (Least total penalty as per SLS) in the vector M. M\mbox{[}i\mbox{]} = OPT(i) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{slsfinal_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Driver function for Running Functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{slsfinal_8cpp_aa2389c8e2e37cdff99c899637779ed5e}\label{slsfinal_8cpp_aa2389c8e2e37cdff99c899637779ed5e}} 
+\index{slsfinal.cpp@{slsfinal.cpp}!calcErr@{calcErr}}
+\index{calcErr@{calcErr}!slsfinal.cpp@{slsfinal.cpp}}
+\doxysubsubsection{\texorpdfstring{calcErr()}{calcErr()}}
+{\footnotesize\ttfamily double calc\+Err (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{structpoint}{point}} $>$}]{pts,  }\item[{\mbox{\hyperlink{structlineqn}{lineqn}}}]{l }\end{DoxyParamCaption})}
+
+
+
+Calculates the Squared Error for a given set of points and line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pts} & Vector of points \\
+\hline
+{\em l} & Line l \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the Squared Error ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{slsfinal_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{slsfinal_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{slsfinal.cpp@{slsfinal.cpp}!main@{main}}
+\index{main@{main}!slsfinal.cpp@{slsfinal.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Driver function for Running Functions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Command line arguments \\
+\hline
+{\em argv} & Command line arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{slsfinal_8cpp_ae884faf203555f8f8925d78925870ee8}\label{slsfinal_8cpp_ae884faf203555f8f8925d78925870ee8}} 
+\index{slsfinal.cpp@{slsfinal.cpp}!precalc@{precalc}}
+\index{precalc@{precalc}!slsfinal.cpp@{slsfinal.cpp}}
+\doxysubsubsection{\texorpdfstring{precalc()}{precalc()}}
+{\footnotesize\ttfamily void precalc (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{structpoint}{point}} $>$}]{pts,  }\item[{vector$<$ vector$<$ \mbox{\hyperlink{structlineqn}{lineqn}} $>$ $>$ \&}]{L,  }\item[{vector$<$ vector$<$ double $>$ $>$ \&}]{E }\end{DoxyParamCaption})}
+
+
+
+Calculated the line of best fit from set of points from i to j. Also, calculates the sqaured error of set of points wrt the best fit line calculated previously. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pts} & Vector of points \\
+\hline
+{\em L} & Vector of Vector of having Line Equation of the form y = ax + b \\
+\hline
+{\em E} & Vector of Vector containing error E\mbox{[}i\mbox{]}\mbox{[}j\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{slsfinal_8cpp_a69f12a7d6498db1eefeb42e64ef0728b}\label{slsfinal_8cpp_a69f12a7d6498db1eefeb42e64ef0728b}} 
+\index{slsfinal.cpp@{slsfinal.cpp}!SLS@{SLS}}
+\index{SLS@{SLS}!slsfinal.cpp@{slsfinal.cpp}}
+\doxysubsubsection{\texorpdfstring{SLS()}{SLS()}}
+{\footnotesize\ttfamily void SLS (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{structpoint}{point}} $>$}]{pts,  }\item[{int}]{j,  }\item[{vector$<$ vector$<$ \mbox{\hyperlink{structlineqn}{lineqn}} $>$ $>$}]{L,  }\item[{vector$<$ vector$<$ double $>$ $>$}]{E,  }\item[{vector$<$ double $>$ \&}]{M,  }\item[{ofstream \&}]{outfile,  }\item[{double}]{C }\end{DoxyParamCaption})}
+
+
+
+Runs the SLS algorithm and stores the answer (Least total penalty as per SLS) in the vector M. M\mbox{[}i\mbox{]} = OPT(i) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pts} & Vector of points \\
+\hline
+{\em j} & SLS needs to figure out the best fit lines till index n of the points passed in the points vector \\
+\hline
+{\em L} & Vector of Vector of having Line Equation of the form y = ax + b \\
+\hline
+{\em E} & Vector of Vector containing error E\mbox{[}i\mbox{]}\mbox{[}j\mbox{]} \\
+\hline
+{\em M} & Vector storing the optimal errors/penalties \\
+\hline
+{\em outfile} & File for storing the Output \\
+\hline
+{\em C} & Penalty for adding each segment \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{slsfinal_8cpp_a5c02a787ceb6d511e48a746bd6b27f51}\label{slsfinal_8cpp_a5c02a787ceb6d511e48a746bd6b27f51}} 
+\index{slsfinal.cpp@{slsfinal.cpp}!SLS\_helper@{SLS\_helper}}
+\index{SLS\_helper@{SLS\_helper}!slsfinal.cpp@{slsfinal.cpp}}
+\doxysubsubsection{\texorpdfstring{SLS\_helper()}{SLS\_helper()}}
+{\footnotesize\ttfamily void SLS\+\_\+helper (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{structpoint}{point}} $>$}]{pts,  }\item[{int}]{n,  }\item[{vector$<$ vector$<$ \mbox{\hyperlink{structlineqn}{lineqn}} $>$ $>$}]{L,  }\item[{vector$<$ vector$<$ double $>$ $>$}]{E,  }\item[{vector$<$ double $>$ \&}]{M,  }\item[{double}]{C,  }\item[{vector$<$ int $>$ \&}]{M\+\_\+idx }\end{DoxyParamCaption})}
+
+
+
+Runs the SLS algorithm and stores the answer (Least total penalty as per SLS) in the vector M. M\mbox{[}i\mbox{]} = OPT(i) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pts} & Vector of points \\
+\hline
+{\em n} & SLS needs to figure out the best fit lines till index n of the points passed in the points vector \\
+\hline
+{\em L} & Vector of Vector of having Line Equation of the form y = ax + b \\
+\hline
+{\em E} & Vector of Vector containing error E\mbox{[}i\mbox{]}\mbox{[}j\mbox{]} \\
+\hline
+{\em M} & Vector storing the optimal errors/penalties \\
+\hline
+{\em C} & Penalty for adding a line segment \\
+\hline
+{\em M\+\_\+idx} & \\
+\hline
+\end{DoxyParams}
